@@ -61,6 +61,17 @@
       });
     });
   </script>
-  
+
+<script>
+  FundraiseUp.on('checkoutOpen', function () {
+    gtag('event', 'checkout_opened', {
+      event_category: 'donation',
+      event_label: 'Fundraise Up'
+    });
+
+    console.log('GA event: checkout_opened');
+  });
+</script>
+
 </body>
 </html>
