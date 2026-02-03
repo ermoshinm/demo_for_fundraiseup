@@ -73,5 +73,22 @@
   });
 </script>
 
+<script>
+  function simulateDonation() {
+    gtag('event', 'donation_completed', {
+      event_category: 'donation',
+      event_label: 'FundraiseUp simulated donation',
+      value: 700,
+      currency: 'USD'
+    });
+
+    alert('Simulated donation event sent to Google Analytics');
+  }
+</script>
+
+<button onclick="simulateDonation()">
+  Simulate $700 Donation
+</button>
+  
 </body>
 </html>
